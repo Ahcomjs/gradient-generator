@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Generator</title>
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/assets/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="heading">
-            <span>GRADIENT GENERATOR</span>
-            <h6 class="gradient-preview"></h6>
-        </h1>
+        <h1 class="heading">Gradient Generator</h1>
         <div class="color-inputs">
-            <input type="color" id="startColor">
-            <input type="color" id="endColor">
+            <input type="color" id="startColor" title="Select start color">
+            <input type="color" id="endColor" title="Select end color">
+        </div>
+        <div class="direction-input">
+            <label for="direction">Direction:</label>
+            <select id="direction">
+                <option value="to right">To Right</option>
+                <option value="to left">To Left</option>
+                <option value="to top">To Top</option>
+                <option value="to bottom">To Bottom</option>
+                <option value="to top right">To Top Right</option>
+                <option value="to top left">To Top Left</option>
+                <option value="to bottom right">To Bottom Right</option>
+                <option value="to bottom left">To Bottom Left</option>
+            </select>
+        </div>
+        <div class="preview-container">
+            <h2>Preview</h2>
+            <div class="gradient-preview"></div>
+            <h3>Gradient code</h3>
+            <p class="css-code"></p>
+            <button id="copyButton">Copy Gradient</button>
+            <p id="copyMessage"></p>
         </div>
     </div>
-    <script src="./src/js/script.js"></script>
+    <script src="./src/assets/js/script.js"></script>
 </body>
 </html>
