@@ -10,7 +10,6 @@
   <div class="container">
     <h1 class="heading">Gradient Generator</h1>
     <div class="controls">
-      <!-- Color Inputs -->
       <div class="color-inputs">
         <div class="color-picker">
           <label for="startColor">Start Color:</label>
@@ -22,7 +21,6 @@
         </div>
       </div>
 
-      <!-- Gradient Type -->
       <div class="gradient-type">
         <label for="gradientType">Gradient Type:</label>
         <select id="gradientType">
@@ -34,7 +32,6 @@
         </select>
       </div>
 
-      <!-- Direction -->
       <div class="direction-input">
         <label for="direction">Direction (For Linear):</label>
         <select id="direction">
@@ -49,7 +46,6 @@
         </select>
       </div>
 
-      <!-- Opacity -->
       <div class="opacity-input">
         <label for="opacity">Opacity:</label>
         <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
@@ -57,8 +53,8 @@
       </div>
     </div>
 
-    <!-- Gradient Preview -->
     <div class="preview-container">
+       <h3>Gradient Preview</h3> 
       <div class="gradient-preview"></div>
       <p class="css-code"></p>
       <button id="copyButton">Copy CSS</button>
