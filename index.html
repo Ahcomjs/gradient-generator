@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="./src/assets/img/gradient.png" />
-    <title>Gradient Generator</title>
-    <link rel="stylesheet" href="./src/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Gradient Generator</title>
+  <link rel="stylesheet" href="./src/assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="heading">Gradient Generator</h1>
-        <div class="color-inputs">
-            <input type="color" id="startColor" title="Select start color">
-            <input type="color" id="endColor" title="Select end color">
+  <div class="container">
+    <h1 class="heading">Gradient Generator</h1>
+    <div class="controls">
+      <!-- Color Inputs -->
+      <div class="color-inputs">
+        <div class="color-picker">
+          <label for="startColor">Start Color:</label>
+          <input type="color" id="startColor">
         </div>
-        <div class="direction-input">
-            <label for="direction">Direction:</label>
-            <select id="direction" class="direction">
-                <option value="to right">To Right</option>
-                <option value="to left">To Left</option>
-                <option value="to top">To Top</option>
-                <option value="to bottom">To Bottom</option>
-                <option value="to top right">To Top Right</option>
-                <option value="to top left">To Top Left</option>
-                <option value="to bottom right">To Bottom Right</option>
-                <option value="to bottom left">To Bottom Left</option>
-            </select>
+        <div class="color-picker">
+          <label for="endColor">End Color:</label>
+          <input type="color" id="endColor">
         </div>
-        <div class="preview-container">
-            <h2>Preview</h2>
-            <div class="gradient-preview"></div>
-            <h3>Gradient code</h3>
-            <p class="css-code"></p>
-            <button id="copyButton">Copy Gradient</button>
-            <p id="copyMessage"></p>
-        </div>
+      </div>
+
+      <!-- Gradient Type -->
+      <div class="gradient-type">
+        <label for="gradientType">Gradient Type:</label>
+        <select id="gradientType">
+          <option value="linear-gradient">Linear</option>
+          <option value="radial-gradient">Radial</option>
+          <option value="conic-gradient">Conic</option>
+          <option value="repeating-linear-gradient">Repeating Linear</option>
+          <option value="repeating-radial-gradient">Repeating Radial</option>
+        </select>
+      </div>
+
+      <!-- Direction -->
+      <div class="direction-input">
+        <label for="direction">Direction (For Linear):</label>
+        <select id="direction">
+          <option value="to right">To Right</option>
+          <option value="to left">To Left</option>
+          <option value="to top">To Top</option>
+          <option value="to bottom">To Bottom</option>
+          <option value="to top right">To Top Right</option>
+          <option value="to top left">To Top Left</option>
+          <option value="to bottom right">To Bottom Right</option>
+          <option value="to bottom left">To Bottom Left</option>
+        </select>
+      </div>
+
+      <!-- Opacity -->
+      <div class="opacity-input">
+        <label for="opacity">Opacity:</label>
+        <input type="range" id="opacity" min="0" max="1" step="0.1" value="1">
+        <span id="opacityValue">1.0</span>
+      </div>
     </div>
-    <script src="./src/assets/js/script.js"></script>
+
+    <!-- Gradient Preview -->
+    <div class="preview-container">
+      <div class="gradient-preview"></div>
+      <p class="css-code"></p>
+      <button id="copyButton">Copy CSS</button>
+      <p id="copyMessage"></p>
+    </div>
+  </div>
+  <script src="./src/assets/js/script.js"></script>
 </body>
 </html>

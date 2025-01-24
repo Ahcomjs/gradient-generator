@@ -1,32 +1,62 @@
 const startColorInput = document.getElementById('startColor');
 const endColorInput = document.getElementById('endColor');
+const gradientTypeInput = document.getElementById('gradientType');
 const directionInput = document.getElementById('direction');
-const body = document.body;
+const opacityInput = document.getElementById('opacity');
+const opacityValue = document.getElementById('opacityValue');
 const gradientPreview = document.querySelector('.gradient-preview');
 const cssCodeElement = document.querySelector('.css-code');
 const copyButton = document.getElementById('copyButton');
 const copyMessage = document.getElementById('copyMessage');
+const body = document.body;
 
-function setGradient() {
-  const gradient = `linear-gradient(${directionInput.value}, ${startColorInput.value}, ${endColorInput.value})`;
-  body.style.background = gradient;
+function updateGradient() {
+  const startColor = startColorInput.value;
+  const endColor = endColorInput.value;
+  const gradientType = gradientTypeInput.value;
+  const direction = directionInput.value;
+  const opacity = opacityInput.value;
+
+  let gradient = '';
+
+  if (gradientType === 'linear-gradient') {
+    gradient = `linear-gradient(${direction}, ${applyOpacity(startColor, opacity)}, ${applyOpacity(endColor, opacity)})`;
+  } else if (gradientType === 'radial-gradient') {
+    gradient = `radial-gradient(circle, ${applyOpacity(startColor, opacity)}, ${applyOpacity(endColor, opacity)})`;
+  } else if (gradientType === 'conic-gradient') {
+    gradient = `conic-gradient(from 0deg, ${applyOpacity(startColor, opacity)}, ${applyOpacity(endColor, opacity)})`;
+  } else if (gradientType === 'repeating-linear-gradient') {
+    gradient = `repeating-linear-gradient(${direction}, ${applyOpacity(startColor, opacity)}, ${applyOpacity(endColor, opacity)} 20%)`;
+  } else if (gradientType === 'repeating-radial-gradient') {
+    gradient = `repeating-radial-gradient(circle, ${applyOpacity(startColor, opacity)}, ${applyOpacity(endColor, opacity)} 20%)`;
+  }
+
   gradientPreview.style.background = gradient;
+  body.style.background = gradient;
+
   cssCodeElement.textContent = `background: ${gradient};`;
-  copyMessage.textContent = '';
 }
 
-function copyGradient() {
-  const cssCode = cssCodeElement.textContent;
-  navigator.clipboard.writeText(cssCode).then(() => {
-    copyMessage.textContent = 'Gradient copied to clipboard!';
-  }, () => {
-    copyMessage.textContent = 'Failed to copy Gradient.';
+function applyOpacity(color, opacity) {
+  const rgb = hexToRgb(color);
+  return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${opacity})`;
+}
+
+function hexToRgb(hex) {
+  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
+  return { r, g, b };
+}
+
+function copyToClipboard() {
+  navigator.clipboard.writeText(cssCodeElement.textContent).then(() => {
+    copyMessage.textContent = 'Copied to clipboard!';
+    setTimeout(() => (copyMessage.textContent = ''), 2000);
   });
 }
 
-startColorInput.addEventListener('input', setGradient);
-endColorInput.addEventListener('input', setGradient);
-directionInput.addEventListener('change', setGradient);
-copyButton.addEventListener('click', copyGradient);
+[startColorInput, endColorInput, gradientTypeInput, directionInput, opacityInput].forEach(input =>
+  input.addEventListener('input', updateGradient)
+);
+copyButton.addEventListener('click', copyToClipboard);
 
-setGradient(); 
+updateGradient();
