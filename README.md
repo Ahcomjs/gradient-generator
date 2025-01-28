@@ -24,4 +24,4 @@ Gradient Generator is a tool designed to help developers and designers easily cr
   
 - **CSS3**: The latest version of CSS, used for styling web pages. It provides advanced features like animations, flexbox, grid layout, and responsive design, allowing developers to create modern, visually appealing web designs.
   
-- **HTML5**: The latest version of HTML, used to structure and organize content on the web. It introduces new elements like <section>, <article>, <header>, and <footer>, and improves support for multimedia, form controls, and web storage.
+- **HTML5**: The latest version of HTML, used to structure and organize content on the web. It introduces new elements like section, article, header, and footer, and improves support for multimedia, form controls, and web storage.
