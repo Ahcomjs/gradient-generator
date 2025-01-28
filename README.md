@@ -1,27 +1,41 @@
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/f3a181ff-65b7-444a-a7e6-4d7f4bf399ee" alt="Descripción de la imagen" width="120">
+    <img src="https://github.com/user-attachments/assets/f48f6e14-83a7-464b-9f03-7552d8de3c3a" alt="Descripción de la imagen" width="120">
 </p>
 
-<h1 align="center"> Gradient Generator</h1>
+<h1 align="center">Gif Expert App</h1>
 
 ## About
 
-Gradient Generator is a tool designed to help developers and designers easily create and customize CSS gradients. This project simplifies the process of generating linear, radial, and conic gradients with a user-friendly interface and real-time preview.
+Gif Expert App is a lightweight and responsive tool that allows users to search, view, and download GIFs effortlessly. With a clean and user-friendly interface, this app makes it easy to explore and manage your favorite GIFs.
 
 ## Features
 
-- Intuitive UI for creating gradients
-- Supports linear, radial, and conic gradients
-- Real-time gradient preview
-- Copy-to-clipboard functionality for gradient CSS code
-- Color picker for precise customization
-- Adjustable gradient angle and position
+- **Search for GIFs**: Quickly find GIFs using keywords with an integrated search bar.
+- **Category-based organization**: GIFs are categorized for easy navigation.
+- **Real-time results**: Instantly fetch and display GIFs from the Giphy API.
+- **Save to device**: Download GIFs directly to your local storage.
+- **Copy links**: Share GIF links with a simple click.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-## Some of the technologies used
+## Technologies Used
 
-- **JavaScript**: A versatile programming language used to build interactive web applications. It allows developers to implement dynamic features on webpages, such as user input handling, API requests, and real-time updates.
-  
-- **CSS3**: The latest version of CSS, used for styling web pages. It provides advanced features like animations, flexbox, grid layout, and responsive design, allowing developers to create modern, visually appealing web designs.
-  
-- **HTML5**: The latest version of HTML, used to structure and organize content on the web. It introduces new elements like `<section>`, `<article>`, `<header>`, and `<footer>`, and improves support for multimedia, form controls, and web storage.
+This project was built using the following technologies:
 
+- **Html**: Structures the content of the application.
+- **Css**: Provides styling for a visually appealing and responsive design.
+- **Javascript**: Adds interactivity and dynamic features to the app.
+- **React**: A JavaScript library for building fast and modular user interfaces.
+- **Jest**: Ensures the application is reliable by providing unit testing capabilities.
+- **Typescript**: Enhances JavaScript with static typing for better code quality.
+- **Vite**: A modern build tool for a fast and optimized development experience.
+- **Yarn**: Used as the package manager for dependency management.
+- **Giphy API**: Integrates with Giphy's vast collection of GIFs for search and display functionalities.
+- **Git**: Version control to manage the application's source code.
+
+## How to Use
+
+1. Enter a keyword in the search bar.
+2. Click the **Search** button to fetch GIFs related to the keyword.
+3. Browse through the results.
+4. Click the **Download** button on a GIF to save it to your device.
+5. Use the **Copy Link** button to share GIFs with friends.
