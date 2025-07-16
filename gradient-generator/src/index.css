@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-colorful {
+  width: 100%;
+  height: 200px;
+}
+
+.react-colorful__hue,
+.react-colorful__alpha {
+  height: 12px;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #2D3748;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A5568;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+.react-colorful__pointer {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  border: 2px solid white !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2) !important;
+  transform: translate(-50%, -50%) !important;
+}
