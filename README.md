@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1ceb2c4b-2c2c-4f62-bef3-3757e450c6b0" alt="Gradient Generator Logo" width="150">
+  <img src="https://github.com/user-attachments/assets/34f7ba98-1bcf-4be0-a065-e9f82e891880" alt="Gradient Generator Logo" width="150">
 </p>
 
 <h1 align="center">🎨 Gradient Generator</h1>
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="LINK_TO_YOUR_LIVE_DEMO" target="_blank">
+  <a href="https://gradient-generatorproject.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Live_Demo-View_Here-blue?style=for-the-badge&logo=vercel" alt="Live Demo">
   </a>
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Project Status">
