@@ -1,27 +1,12 @@
+# React + Vite
 
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/f3a181ff-65b7-444a-a7e6-4d7f4bf399ee" alt="Descripción de la imagen" width="120">
-</p>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<h1 align="center"> Gradient Generator</h1>
+Currently, two official plugins are available:
 
-## About
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Gradient Generator is a tool designed to help developers and designers easily create and customize CSS gradients. This project simplifies the process of generating linear, radial, and conic gradients with a user-friendly interface and real-time preview.
+## Expanding the ESLint configuration
 
-## Features
-
-- Intuitive UI for creating gradients
-- Supports linear, radial, and conic gradients
-- Real-time gradient preview
-- Copy-to-clipboard functionality for gradient CSS code
-- Color picker for precise customization
-- Adjustable gradient angle and position
-
-## Some of the technologies used
-
-- **JavaScript**: A versatile programming language used to build interactive web applications. It allows developers to implement dynamic features on webpages, such as user input handling, API requests, and real-time updates.
-  
-- **CSS3**: The latest version of CSS, used for styling web pages. It provides advanced features like animations, flexbox, grid layout, and responsive design, allowing developers to create modern, visually appealing web designs.
-  
-- **HTML5**: The latest version of HTML, used to structure and organize content on the web. It introduces new elements like section, article, header, and footer, and improves support for multimedia, form controls, and web storage.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
