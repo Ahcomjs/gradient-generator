@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/34f7ba98-1bcf-4be0-a065-e9f82e891880" alt="Gradient Generator Logo" width="150">
 </p>
 
-<h1 align="center">🎨 Gradient Generator</h1>
+<h1 align="center">Gradient Generator</h1>
 
 <p align="center">
   An intuitive and powerful tool for easily creating and customizing CSS gradients in real-time.
